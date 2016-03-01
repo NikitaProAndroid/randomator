@@ -1,5 +1,5 @@
 /*
- *   Copyright (C) 2015 NikitaProAndroid
+ *   Copyright (C) 2016 NikitaProAndroid
 */
 
 #include "stdafx.h"

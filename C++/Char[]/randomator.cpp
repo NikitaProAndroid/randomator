@@ -1,5 +1,5 @@
 /*
- *   Copyright (C) 2015 NikitaProAndroid, Quarx2
+ *   Copyright (C) 2016 NikitaProAndroid, Quarx2
 */
 
 #define _CRT_SECURE_NO_WARNINGS
