@@ -1,11 +1,13 @@
 Configuration (laptop DEXP Atlas H162):
 4GB DDR3 RAM
 Intel Core i5-4210M CPU
+Windows 10 x64
 
 Language/realization| Speed of program
 variant             | (interchanges/s)
 --------------------------------------------
 Pascal              |
+                    |
 -String:            | ~6.700.000
 --------------------------------------------
 C++                 |
@@ -13,3 +15,7 @@ C++                 |
 -String:            | ~100.000
 -Vector<char>:      | ~60.000
 -Char[]:            | ~5.100.000
+--------------------------------------------
+Java                |
+                    |
+-StringBuilder:     | ~22.000.000
