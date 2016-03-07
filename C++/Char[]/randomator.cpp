@@ -12,9 +12,6 @@
 #include <cstring>
 
 using namespace std;
-inline int randomVal(unsigned int strLen) {
-	return rand() % strLen;
-}
 int main()
 {
 	unsigned long startTime = clock();
@@ -33,14 +30,17 @@ int main()
 	fseek(input, 0, SEEK_END);
 	length = ftell(input);
 
+	char tmp;
+	char *originalStr = originalString, *currentStr = currentString;
+
 	do {
-		randVal1 = randomVal(length);
-		randVal2 = randomVal(length);
-		char tmp = currentString[randVal1];
-		currentString[randVal1] = currentString[randVal2];
-		currentString[randVal2] = tmp;
+		randVal1 = rand() % length;
+		randVal2 = rand() % length;
+		tmp = *(currentStr+randVal1);
+		*(currentStr+randVal1) = *(currentStr+randVal2);
+		*(currentStr+randVal2) = tmp;
 		counter++;
-	} while (strncmp(originalString, currentString, length) != 0);
+	} while (strncmp(originalStr, currentStr, length) != 0);
 
 	if (counter > 1)
 		output << "SUCCESSFULLY FINISHED! ATTEMPS: " << counter << " TIME(ms): " << (clock() - startTime);
