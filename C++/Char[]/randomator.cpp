@@ -2,14 +2,11 @@
  *   Copyright (C) 2016 NikitaProAndroid, Quarx2
 */
 
-#define _CRT_SECURE_NO_WARNINGS
-
-#include "stdafx.h"
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <ctime>
 #include <cstring>
+#include <ctime>
+#include <fstream>
+#include <iostream>
+#include <stdlib.h>
 
 using namespace std;
 int main()
@@ -20,7 +17,8 @@ int main()
 	char currentString[100];
 	FILE *input = fopen("input.txt", "r");
 	ofstream output("output.txt");
-	unsigned int length, randVal1, randVal2, counter = 0;
+	unsigned long int counter = 0;
+	unsigned int length, randVal1, randVal2;
 
 	srand( (int) time(NULL) );
 
