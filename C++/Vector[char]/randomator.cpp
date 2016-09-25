@@ -2,10 +2,10 @@
  *   Copyright (C) 2016 NikitaProAndroid
 */
 
+#include <cstdlib>
 #include <ctime>
 #include <fstream>
 #include <iostream>
-#include <stdlib.h>
 #include <string>
 #include <vector>
 
@@ -22,6 +22,10 @@ int main()
 	unsigned long startTime = clock();
 
 	ifstream input("input.txt");
+	if (input.fail() || input.peek() == ifstream::traits_type::eof()) {
+		cerr << "input.txt does not exist or is empty!";
+		exit(EXIT_FAILURE);
+	}
 	ofstream output("output.txt");
 	vector<char> originalString;
 	unsigned int length, randVal1, randVal2;
@@ -54,4 +58,3 @@ int main()
 	output.close();
         return 0;
 }
-
